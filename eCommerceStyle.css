@@ -14,7 +14,8 @@ header {
 }
 /* Logo */
 #logo {
-	float: left;
+	display: flex;
+  	flex-direction: column;
 	padding-top: 10px;
 	padding-bottom: 00px;
 	width: 60px;
@@ -24,18 +25,8 @@ header {
 }
 /* Title text*/
 .header_title {
-	float: left;
-	width: calc( 100% - 139px );
-	text-align: right;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	background-color: #ffffff;
-	color: lightpink;
-}
-
-/* Sub-title text*/
-.header_title {
-	float: left;
+	display: flex;
+	flex-direction: row-reverse;
 	width: calc( 100% - 139px );
 	text-align: right;
 	padding-top: 10px;
@@ -60,12 +51,13 @@ header {
 	clear: both;
 	overflow: auto;
 	padding-top: 29px;
+	display: flex;
+	justify-content: space-between;
 }
 /* Sidebar */
 #content .sidebar {
 	font-family: 'Montserrat', sans-serif;
 	color: #323433;
-	float: left;
 	width: 20%;
 	padding-left: 3%;
 	padding-right: 3%;
@@ -76,10 +68,10 @@ header {
 }
 /* main content of the site */
 #content .mainContent {
-	float: left;
 	width: 70%;
 	text-align: center;
 	padding-left: 4%;
+	display: flex;
 }
 /*menubar's properties for menus in sidebar */
 #content .sidebar #menubar {
@@ -106,13 +98,13 @@ header {
 #content .mainContent .productRow {
 	overflow: auto;
 	color: rgba(146,146,146,1.00);
+	width: 50%;
 }
 /* Each product Information in the catalog */
 .mainContent .productRow .productInfo {
-	float: left;
 	padding-left: 5%;
 	padding-right: 5%;
-	width: 40%;
+	width: 100%;
 }
 /* Prices of a products in catalog */
 .productRow .productInfo .price {
@@ -152,7 +144,6 @@ header {
 /*Each footer content */
 #mainWrapper footer div {
 	width: 27%;
-	float: left;
 	padding-left: 4%;
 	padding-right: 2%;
 	color: #323433;
@@ -199,7 +190,6 @@ footer div a {
 }
 /* sidebar */
 #content .sidebar {
-	float: none;
 	width: 100%;
 	height: auto;
 	overflow: auto;
@@ -216,6 +206,7 @@ footer div a {
 	top: -22px;
 	width: 100%;
 	overflow: hidden;
+	display: flow-root;
 }
 /*menu headings in sidebar */
 #menubar .menu h2 {
@@ -225,7 +216,7 @@ footer div a {
 }
 /* Unordered List of links */
 #menubar .menu ul {
-	display: inline;
+	display: block;
 }
 /*list elements */
 #menubar .menu ul li {
@@ -265,11 +256,13 @@ footer div a {
 }
 /* City names in catalog view */
 .productRow .productInfo .price {
-	font-size: 19px;
+	font-size: 14px;
+    padding-top: 5px;
 }
 /* Content holders in catalog view */
 .productRow .productInfo .productContent {
-	font-size: 16px;
+	font-size: 14px;
+    padding-top: 5px;
 }
 
 /* Footer region */
@@ -307,6 +300,16 @@ footer .footerlinks p {
 #mainWrapper #offer {
 	padding-left: 0px;
 	text-align: center;
+}
+.header_title {
+	display: flex;
+	flex-direction: row-reverse;
+	width: calc(100%);
+	text-align: right;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #ffffff;
+	color: lightpink;
 }
 /* Menubar in sidebar */
 #content .sidebar #menubar {
